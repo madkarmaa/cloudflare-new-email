@@ -125,10 +125,7 @@ def prompt(text: str, *, secret: bool = False, ask_save: bool = False) -> str:
 @click.command()
 @click.option('-rm', help = 'Remove saved credentials', is_flag = True)
 def main(rm: bool) -> None:
-    if rm and CREDS_FILE.exists():
-        CREDS_FILE.unlink()
-
-    if not CREDS_FILE.exists():
+    if not CREDS_FILE.exists() or rm:
         CREDS_FILE.write_bytes(b'')
 
     cf_email: str = prompt('CF account email', ask_save = True)
