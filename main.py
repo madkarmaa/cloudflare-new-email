@@ -5,7 +5,7 @@ from typing import Literal, Optional, List, Final
 from pydantic import BaseModel, Field
 from pathlib import Path
 
-CREDS_FILE: Final[Path] = Path('.', '.creds').resolve()
+CREDS_FILE: Final[Path] = Path(Path(__file__).parent, '.creds').resolve()
 KEY_SEPARATOR: Final[str] = '::'
 
 class Action(BaseModel):
