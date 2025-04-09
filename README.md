@@ -1,4 +1,6 @@
-> A simple utility script to add a new email forwarding rule to a Cloudflare-registered domain.
+# Cloudflare New Email Generator
+
+> _A simple utility script to add a new email forwarding rule to a Cloudflare-registered domain._
 
 ## Installation ⚙️
 
