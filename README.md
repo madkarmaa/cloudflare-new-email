@@ -10,7 +10,7 @@ Go to [your profile's API tokens tab](https://dash.cloudflare.com/profile/api-to
 >
 > If you choose to save your token when running the script, make sure that the `.creds` file doesn't get shared!
 
-### Get your domain's zone ID
+### Get your domain's Zone ID
 
 Go to [your profile's domains tab](https://dash.cloudflare.com), select your domain, scroll down the **Overview**'s tab and copy the **Zone ID**.
 
