@@ -25,7 +25,7 @@ git clone https://github.com/madkarmaa/cloudflare-new-email.git
 cd ./cloudflare-new-email/
 ```
 
-### Install dependencies
+### Install the dependencies
 
 ```bash
 uv sync
