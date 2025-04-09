@@ -4,7 +4,7 @@ A simple utility script to add a new email forwarding rule to a Cloudflare-regis
 
 Go to [your profile's API tokens tab](https://dash.cloudflare.com/profile/api-tokens) and click the **View** button for your **Global API Key**.
 
-## Get your website's zone ID
+## Get your domain's zone ID
 
 Go to [your profile's domains tab](https://dash.cloudflare.com), select your domain, scroll down the **Overview**'s tab and copy the **Zone ID**.
 
