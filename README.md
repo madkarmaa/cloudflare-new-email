@@ -6,7 +6,7 @@
 
 ### Get your API token
 
-Go to [your profile's API tokens tab](https://dash.cloudflare.com/profile/api-tokens) and click the **View** button for your **Global API Key**.
+Go to [your profile's API tokens tab](https://dash.cloudflare.com/profile/api-tokens) and click the **View** button for your **Global API Key**, then copy it.
 
 > [!CAUTION]
 >
