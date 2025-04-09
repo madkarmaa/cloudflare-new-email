@@ -122,7 +122,12 @@ def prompt(text: str, *, secret: bool = False, ask_save: bool = False) -> str:
     click.echo()
     return res.strip()
 
-def main() -> None:
+@click.command()
+@click.option('-rm', help = 'Remove saved credentials', is_flag = True)
+def main(rm: bool) -> None:
+    if rm and CREDS_FILE.exists():
+        CREDS_FILE.unlink()
+
     if not CREDS_FILE.exists():
         CREDS_FILE.write_bytes(b'')
 
@@ -157,4 +162,4 @@ if __name__ == '__main__':
     except click.exceptions.Abort:
         pass
     finally:
-        click.echo('\n') # idk why I have to add \n here
+        click.echo()
