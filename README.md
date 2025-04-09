@@ -1,20 +1,31 @@
-## Install UV
+A simple utility script to add a new email forwarding rule to a Cloudflare-registered domain.
 
-https://docs.astral.sh/uv/getting-started/installation/
+### Get your API token
 
-## Clone the repository
+Go to [your profile's API tokens tab](https://dash.cloudflare.com/profile/api-tokens) and click the **View** button for your **Global API Key**.
+
+## Get your website's zone ID
+
+Go to [your profile's domains tab](https://dash.cloudflare.com), select your domain, scroll down the **Overview**'s tab and copy the **Zone ID**.
+
+### Install UV
+
+Follow the docs for your platform [here](https://docs.astral.sh/uv/getting-started/installation/).
+
+### Clone the repository
 
 ```bash
-git clone
+git clone https://github.com/madkarmaa/cloudflare-new-email.git
+cd ./cloudflare-new-email/
 ```
 
-## Install dependencies
+### Install dependencies
 
 ```bash
 uv sync
 ```
 
-## Run the program
+### Run the program
 
 ```bash
 uv run ./main.py
