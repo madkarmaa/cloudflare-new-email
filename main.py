@@ -51,7 +51,7 @@ def add_new_email(*, cf_email: str, cf_token: str, zone_id: str, body: dict) -> 
     cf_token = cf_token.strip()
     zone_id = zone_id.strip()
 
-    res = req.post(
+    res: req.Response = req.post(
         url = f'https://api.cloudflare.com/client/v4/zones/{zone_id}/email/routing/rules',
         headers = {
             'Content-Type': 'application/json',
@@ -76,12 +76,13 @@ def save_credential(key: str, value: str) -> None:
 
     creds[encoded_key] = encoded_value
 
-    CREDS_FILE.write_text('\n'.join(f'{k}{KEY_SEPARATOR}{v}' for k, v in creds.items()))
+    CREDS_FILE.write_text('\n'.join(
+        f'{k}{KEY_SEPARATOR}{v}'
+        for k, v
+        in creds.items()
+    ))
 
 def get_saved_credential(key: str) -> Optional[str]:
-    if not CREDS_FILE.exists():
-        return None
-
     encoded_key: str = base64.b64encode(key.encode()).decode('utf-8')
 
     for line in CREDS_FILE.read_text().splitlines():
@@ -151,4 +152,7 @@ def main() -> None:
         click.echo(click.style(f'❌ Failed to create email forwarding rule', fg = 'red', bold = True))
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except click.exceptions.Abort:
+        pass
