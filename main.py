@@ -96,14 +96,14 @@ def get_saved_credential(key: str) -> Optional[str]:
 def prompt(text: str, *, secret: bool = False, ask_save: bool = False) -> str:
     saved_value: Optional[str] = get_saved_credential(text)
     if saved_value is not None:
-        click.echo(click.style(f'{text}: Using saved value', fg = 'blue', bold = True))
+        click.echo(f'{click.style(text, fg = 'yellow', bold = True)}: {click.style('💾 SAVED VALUE', fg = 'blue', bold = True)}')
         click.echo()
         return saved_value
 
     res: str = click.prompt(
         click.style(text, fg = 'yellow', bold = True),
         value_proc = str,
-        prompt_suffix = ' > ',
+        prompt_suffix = click.style(' >', fg = 'magenta'),
         hide_input = secret,
     )
 
@@ -156,3 +156,5 @@ if __name__ == '__main__':
         main()
     except click.exceptions.Abort:
         pass
+    finally:
+        click.echo('\n') # idk why I have to add \n here
