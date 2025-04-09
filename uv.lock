@@ -21,7 +21,7 @@ wheels = [
 ]
 
 [[package]]
-name = "cf-new-email"
+name = "cloudflare-new-email"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

@@ -1,5 +1,5 @@
 [project]
-name = "cf-new-email"
+name = "cloudflare-new-email"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
