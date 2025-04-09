@@ -1,10 +1,16 @@
-A simple utility script to add a new email forwarding rule to a Cloudflare-registered domain.
+> A simple utility script to add a new email forwarding rule to a Cloudflare-registered domain.
+
+## Installation ⚙️
 
 ### Get your API token
 
 Go to [your profile's API tokens tab](https://dash.cloudflare.com/profile/api-tokens) and click the **View** button for your **Global API Key**.
 
-## Get your domain's zone ID
+> [!CAUTION]
+>
+> If you choose to save your token when running the script, make sure that the `.creds` file doesn't get shared!
+
+### Get your domain's zone ID
 
 Go to [your profile's domains tab](https://dash.cloudflare.com), select your domain, scroll down the **Overview**'s tab and copy the **Zone ID**.
 
